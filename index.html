@@ -4,8 +4,132 @@
         <title>
             dursh.me
         </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            /* Adapted from https://www.w3schools.com/howto/howto_css_parallax.asp */
+            /* Parallax Effect */
+            body, html {
+                height: 100%;
+                margin: 0;
+                font: 400 15px/2 "Lato", sans-serif;
+                color: rgb(218, 82, 172);
+            }
+            .img-1, .img-2 {
+                position: relative;
+                opacity: 0.7;
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            /* Image 1 */
+            .img-1 {
+                background-image: url("sud.jpg");
+                min-height: 100%;
+            }
+
+            /* Image 2 */
+            .img-2 {
+                background-image: url("baker-berry.jpg");
+                min-height: 400px;
+            }
+
+            /* Caption on Top */
+            .caption {
+                border-radius: 25px;
+                position: absolute;
+                text-align: center;
+                top: 50%;
+                width: 100%;
+                color: #000;
+            }
+
+            .caption span.border {
+                border-radius: 25px;
+                background-color: rgb(221, 221, 221);
+                color: rgb(19, 19, 19);
+                padding: 18px;
+                font-size: 25px;
+                letter-spacing: 10px;
+            }
+
+            /* Adapted from https://fdossena.com/?p=html5cool/buttons/i.frag */
+            /* Bouncy Buttons */
+            .button1{
+                display: inline-block;
+                color: #FFFFFF;
+                text-align: center;
+                box-sizing: border-box;
+                margin: 0 0.3em 0.3em 0;
+                border: .1em solid #FFFFFF;
+                border-radius: .12em;
+                transition: all 0.2s;
+                padding: .35em 1.2em;
+                text-decoration: none;
+
+            }
+            .button1:hover{
+                color: #000;
+                background-color: #FFFFFF;
+            }
+            @media all and (max-width:30em) {
+                .button1{
+                    display: block;
+                    margin: .4em auto;
+                }
+            }
+            .bouncy{
+                animation:bouncy 5s infinite linear;
+                position:relative;
+            }
+            @keyframes bouncy {
+                0%{top:0em}
+                40%{top:0em}
+                43%{top:-0.9em}
+                46%{top:0em}
+                48%{top:-0.4em}
+                50%{top:0em}
+                100%{top:0em;}
+            }    
+
+            /* Adapted from https://www.w3schools.com/howto/howto_css_center_button.asp */
+            /* Vertical and Horizontally center on a div element */
+            .container {
+                height: 200px;
+                position: relative;
+            }
+            .center {
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }       
+        </style>
     </head>
     <body>
-        My absolutely amazing webpage like w o a h
+        <div class="img-1">
+            <div class="caption">
+                <span class="border">Shimmy on Down</span>
+            </div>
+        </div>
+
+        <div style="color: rgb(24, 19, 19); background-color: rgb(24, 19, 19);text-align: center;padding: 50px 80px;text-align: justify;">
+            <!--Cool Buttons!-->
+            <div class="container">
+                <div class="center">
+                    <a href="N/A" class="button1 bouncy">Enjoy</a>
+                    <a href="N/A" class="button1 bouncy" style="animation-delay: 0.07s;">Useless</a>
+                    <a href="N/A" class="button1 bouncy" style="animation-delay: 0.14s;">Fancy</a>
+                    <a href="N/A" class="button1 bouncy" style="animation-delay: 0.21s;">Buttons</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="img-2"></div>
+
     </body>
 </html>
